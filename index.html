@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
+    <title>Solos</title>
+</head>
+
+<body>
+    <header class="header">
+        <section class="header-content">
+            <a href="#" class="logo">
+                <img src="img/nature (1).png" alt="logo">
+                <span class="logo-text">AgroEduca</span>
+            </a>
+            <nav class="navbar">
+                <a href="#home">Início</a>
+                <a href="#about">Sobre</a>
+                <a href="#contact">Contato</a>
+            </nav>
+        </section>
+    </header>
+
+    <div class="section-container" id="home">
+        <section class="home-content">
+            <h3>O Solo</h3>
+            <p>O Solo pode ser definido como um corpo natural constituído de substâncias orgânicas (como raízes de
+                plantas, microrganismos e insetos) e inorgânicas (minerais), proveniente do processo de intemperismo, ao
+                longo de milhares de anos.
+                A lenta decomposição química e física das rochas, sob a ação da água da chuva, relevo, clima e atividade
+                biológica, resultaram na formação de diferentes horizontes, popularmente conhecidos como camadas de
+                solo. O conjunto de horizontes compõe o perfil do solo, como ilustra a figura a seguir.
+            </p>
+            <a href="#about" class="btn">Saiba mais</a>
+        </section>
+        <section class="home-image">
+            <img src="img/Soil_profile.png"
+                alt="A figura mostra um perfil de solo com seus principais horizontes: O, A, B e C."
+                title="Departamento de Agricultura dos EUA - CCO Domínio Público / Fonte: Wikimedia Commons."
+                class="imagem-direita-inicio">
+        </section>
+    </div>
+
+    <div class="section-container" id="about">
+        <section class="about-content">
+            <h2>Formação e composição do solo</h2>
+            <p>O Solo é um sistema dinâmico, isto é, encontra-se em constante fluxo de matéria e energia. Seu
+                desenvolvimento em profundidade é resultado da interação de um conjunto de fatores, tais como relevo,
+                clima e microrganismos, que atuam sobre o material de origem (ou "rocha mãe"), ao longo do tempo.
+                Os processos de formação do solo são chamados de processos pedogenéticos e envolvem adições, perdas,
+                transformações e translocações de partículas e nutrientes.</p>
+            <p>Como exemplos de solos altamente
+                desenvolvidos, citam-se os Latossolos, uma classe de solos caraterizada pelo alto teor de argila e
+                óxidos de ferro e alumínio, o que lhes conferem a cor avermelhada ("terra roxa").
+                Esses solos são comuns na região Norte do Estado do Paraná e são provenientes de rochas basálticas.</p>
+
+            <p>Quanto à composição química, um solo ideal é composto por 45% de elementos minerais (areia, silte e/ou
+                argila), 25% de água, 25% de ar (presente nos macro e microporos do solo) e 5% de matéria orgânica
+                (húmus).</p>
+        </section>
+        <section class="about-image">
+            <img src="img/Components_of_Soil_Pie_Chart.png" alt="Gráfico em piza mostrando a composição de um solo ideal."
+                title="Fonte: JasonHS, CC BY-SA 4.0" class="imagem-direita-sobre">
+        </section>
+    </div>
+
+    <!-- Seção de Contato -->
+    <div class="section-container" id="contact">
+        <section class="contact-content">
+            <h2>Entre em Contato</h2>
+            <p>Se você tiver dúvidas ou quiser saber mais sobre outros temas relacionados à Agricultura, preencha o formulário abaixo e entraremos em
+                contato!</p>
+
+            <form action="#" method="POST" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" name="name" placeholder="Seu nome" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Seu email" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" class="form-control"
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+
+            <div class="contact-info">
+                <h3>Outras Formas de Contato</h3>
+                <p>Você também pode entrar em contato conosco por email:</p>
+                <p><a href="agroEduca@gmail.com">agroEduca@gmail.com</a></p>
+                <p>Desenvolvido pela Eng. Agrônoma e Especialista em Fisiologia Vegetal e Nutrição de Plantas:</p>
+                <p>Ana Flávia Pedrão.</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
