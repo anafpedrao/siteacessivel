@@ -37,20 +37,20 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    text-decoration: none; /* Remover qualquer estilo de link */
+    text-decoration: none;
 }
 
 .logo img {
-    width: 50px; /* Reduzindo o tamanho do logo para 50px */
+    width: 50px;
     height: auto;
-    margin-right: 10px; /* Espaço entre o logo e o texto */
+    margin-right: 10px;
 }
 
 .logo-text {
     font-size: 24px;
     color: #fff;
     font-weight: bold;
-    text-decoration: none; /* Garantir que o texto não fique linkado ou grifado */
+    text-decoration: none;
 }
 
 /* Navegação */
@@ -67,7 +67,7 @@ body {
 
 /* Botão Saiba mais */
 .btn {
-    background-color: #2e8b57;
+    background-color: #5f020e;
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -75,7 +75,15 @@ body {
 }
 
 .btn:hover {
-    background-color: #1c6f41;
+    background-color: #3f010b;
+}
+
+/* Ajuste para evitar que o header tampe os títulos */
+:target::before {
+    content: "";
+    display: block;
+    height: 80px; /* Ajuste conforme o tamanho do seu header */
+    margin-top: -80px;
 }
 
 /* Containers de cada seção */
@@ -123,7 +131,7 @@ body {
     background-color: #ffffff;
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     transition: box-shadow 0.3s ease-in-out;
 }
@@ -157,11 +165,15 @@ body {
     font-size: 16px;
     color: #333;
     margin-bottom: 5px;
-    font-family:    'Roboto', sans-serif;
+}
+
+/* Garantindo que a fonte do textarea seja correta */
+textarea {
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-control {
-    background-color: #F1EDEF; /* Cor suave de fundo para os campos */
+    background-color: #F1EDEF;
     padding: 12px;
     font-size: 16px;
     border: 1px solid #ccc;
@@ -176,7 +188,7 @@ body {
 
 /* Estilo do botão */
 .btn-submit {
-    background-color: #5f020e; /* Cor de fundo do botão */
+    background-color: #5f020e;
     color: white;
     padding: 12px 25px;
     border: none;
@@ -188,7 +200,7 @@ body {
 }
 
 .btn-submit:hover {
-    background-color: #3f010b; /* Cor de fundo quando o botão é clicado */
+    background-color: #3f010b;
 }
 
 /* Informações adicionais */
@@ -245,4 +257,30 @@ body {
     .contact-form {
         grid-template-columns: 1fr;
     }
+    .footer-text {
+        font-size: 0.5rem; /* Tamanho menor */
+        text-align: center;
+        color: #333; /* Cor neutra */
+    }
+}
+.menu-acessibilidade{
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+.rotacao-botao{
+    transform: rotate(-90deg);
+    transform-origin: right center;
+}
+.opcoes-acessibilidade{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.opcoes-acessibilidade button{
+    margin-bottom: 5px;
+}
+.apresenta-lista{
+    display: none;
 }
