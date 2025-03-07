@@ -2,14 +2,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const botaoDeAcessibilidade = document.getElementById('botao-acessibilidade')
     const opcoesDeAcessibilidade = document.getElementById('opcoes-acessibilidade')
 
-    botaoDeAcessibilidade.addEventListener('click', function(){
+    botaoDeAcessibilidade.addEventListener('click', function () {
         botaoDeAcessibilidade.classList.toggle('rotacao-botao');
         opcoesDeAcessibilidade.classList.toggle('apresenta-lista')
     })
 
     const aumentaFonteBotao = document.getElementById('aumentar-fonte');
     const diminuiFonteBotao = document.getElementById('diminuir-fonte');
-    const alternaContraste = document.getElementById('alterna-contraste');
 
     let tamanhoBase = 18; // Tamanho inicial do corpo do texto
     let fatorTitulos = 1.5; // Os títulos serão sempre 1.5x maiores que o texto normal
@@ -49,7 +48,4 @@ document.addEventListener('DOMContentLoaded', function () {
     // Aplicar os tamanhos iniciais ao carregar a página
     alterarTamanhoFonte(tamanhoBase);
 
-    alternaContraste.addEventListener('click', function(){
-        document.body.classList.toggle('alto-contraste')
-    })
 });
