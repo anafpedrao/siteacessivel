@@ -1,3 +1,18 @@
+/* Definições de variáveis no :root */
+:root {
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #ffd700;
+
+    --cor-texto-claro: #333333;
+    --cor-fundo-claro: #f4f4f4;
+    --cor-primaria: #006b22;
+    --cor-secundaria: #2ecc71;
+    --cor-botao-hover: #2980b9;
+    --cor-navbar: #34495e;
+}
+
+
 /* Resetando margens e padding */
 * {
     margin: 0;
@@ -9,13 +24,13 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
+    color: var(--cor-texto-claro);
+    background-color: var(--cor-fundo-claro);
 }
 
 /* Estilo do Header */
 .header {
-    background-color: #2e8b57;
+    background-color: var(--cor-primaria);
     padding: 5px 0;
     position: fixed;
     width: 100%;
@@ -67,7 +82,7 @@ body {
 
 /* Botão Saiba mais */
 .btn {
-    background-color: #5f020e;
+    background-color: var(--cor-secundaria);
     color: white;
     padding: 12px 20px;
     text-decoration: none;
@@ -75,14 +90,15 @@ body {
 }
 
 .btn:hover {
-    background-color: #3f010b;
+    background-color: var(--cor-botao-hover);
 }
 
 /* Ajuste para evitar que o header tampe os títulos */
 :target::before {
     content: "";
     display: block;
-    height: 80px; /* Ajuste conforme o tamanho do seu header */
+    height: 80px;
+    /* Ajuste conforme o tamanho do seu header */
     margin-top: -80px;
 }
 
@@ -94,30 +110,36 @@ body {
     padding: 60px 20px;
     min-height: 100vh;
     flex-direction: column;
-    margin-top: 80px; /* Aumento para compensar o cabeçalho fixo */
+    margin-top: 80px;
+    /* Aumento para compensar o cabeçalho fixo */
 }
 
-.home-content, .about-content {
+.home-content,
+.about-content {
     max-width: 800px;
     text-align: justify;
 }
 
-.home-content h3, .about-content h2 {
+.home-content h3,
+.about-content h2 {
     font-size: 36px;
     margin-bottom: 20px;
 }
 
-.home-content p, .about-content p {
+.home-content p,
+.about-content p {
     font-size: 18px;
     margin-bottom: 20px;
 }
 
 /* Estilo das imagens */
-.home-image, .about-image {
+.home-image,
+.about-image {
     text-align: center;
 }
 
-.imagem-direita-inicio, .imagem-direita-sobre {
+.imagem-direita-inicio,
+.imagem-direita-sobre {
     max-width: 90%;
     width: 500px;
     border-radius: 10px;
@@ -138,13 +160,13 @@ body {
 
 .contact-content h2 {
     font-size: 32px;
-    color: #2e8b57;
+    color: var(--cor-primaria);
     margin-bottom: 20px;
 }
 
 .contact-content p {
     font-size: 18px;
-    color: #333;
+    color: var(--cor-texto-claro);
     margin-bottom: 30px;
 }
 
@@ -163,7 +185,7 @@ body {
 
 .form-group label {
     font-size: 16px;
-    color: #333;
+    color: var(--cor-texto-claro);
     margin-bottom: 5px;
 }
 
@@ -182,13 +204,13 @@ textarea {
 }
 
 .form-control:focus {
-    border-color: #2e8b57;
+    border-color: var(--cor-primaria);
     outline: none;
 }
 
 /* Estilo do botão */
 .btn-submit {
-    background-color: #5f020e;
+    background-color: var(--cor-secundaria);
     color: white;
     padding: 12px 25px;
     border: none;
@@ -200,7 +222,7 @@ textarea {
 }
 
 .btn-submit:hover {
-    background-color: #3f010b;
+    background-color: var(--cor-botao-hover);
 }
 
 /* Informações adicionais */
@@ -210,17 +232,17 @@ textarea {
 
 .contact-info h3 {
     font-size: 24px;
-    color: #2e8b57;
+    color: var(--cor-primaria);
     margin-bottom: 15px;
 }
 
 .contact-info p {
     font-size: 16px;
-    color: #333;
+    color: var(--cor-texto-claro);
 }
 
 .contact-info a {
-    color: #2e8b57;
+    color: var(--cor-primaria);
     text-decoration: none;
     font-weight: bold;
 }
@@ -241,11 +263,14 @@ textarea {
         margin-bottom: 10px;
     }
 
-    .home-content, .about-content, .contact-content {
+    .home-content,
+    .about-content,
+    .contact-content {
         text-align: center;
     }
 
-    .imagem-direita-inicio, .imagem-direita-sobre {
+    .imagem-direita-inicio,
+    .imagem-direita-sobre {
         max-width: 80%;
     }
 
@@ -257,30 +282,83 @@ textarea {
     .contact-form {
         grid-template-columns: 1fr;
     }
+
     .footer-text {
-        font-size: 0.5rem; /* Tamanho menor */
+        font-size: 0.8rem; /* Usando rem para ser mais responsivo */
         text-align: center;
-        color: #333; /* Cor neutra */
+        color: var(--cor-texto-claro);
     }
 }
-.menu-acessibilidade{
+
+/* Menu de acessibilidade */
+.menu-acessibilidade {
     position: fixed;
     top: 2rem;
     right: 20px;
     z-index: 1000;
 }
-.rotacao-botao{
+
+.rotacao-botao {
     transform: rotate(-90deg);
     transform-origin: right center;
 }
-.opcoes-acessibilidade{
+
+.opcoes-acessibilidade {
     margin-top: 10px;
     display: flex;
     flex-direction: column;
 }
-.opcoes-acessibilidade button{
+
+.opcoes-acessibilidade button {
     margin-bottom: 5px;
 }
-.apresenta-lista{
+
+.apresenta-lista {
     display: none;
+}
+
+/* Alto contraste */
+.modo-contraste {
+    background-color: var(--cor-fundo-escuro) !important;
+    color: var(--cor-texto-escuro) !important;
+}
+
+.modo-contraste a {
+    color: var(--alto-contraste-link) !important;
+}
+
+.modo-contraste .btn {
+    background-color: var(--alto-contraste-link) !important;
+    color: black !important;
+    border: 2px solid var(--alto-contraste-link) !important;
+}
+
+.modo-contraste .navbar {
+    background-color: var(--cor-navbar) !important;
+}
+
+.modo-contraste .navbar a {
+    color: var(--cor-texto-escuro) !important;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+
+.alto-contraste header,
+.alto-contraste .section-container,
+.alto-contraste .footer {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+    
+}
+
+.alto-contraste .navbar {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .opcoes-acessibilidade{
+    color: var(--alto-contraste-link);
 }
