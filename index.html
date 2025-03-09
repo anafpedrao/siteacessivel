@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -11,7 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
+    <!-- CDN do Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
     <title>Solos</title>
 </head>
@@ -29,18 +31,19 @@
                 <a href="#contact">Contato</a>
                 <div id="acessibilidade" class="menu-acessibilidade">
                     <button id="botao-acessibilidade"
-                        class="btn btn-primary fw-bold rotacao-botao">Acessibilidade</button>
+                        class="btn btn-primary fw-bold rotacao-botao" aria-expanded="false">Acessibilidade</button>
                     <div id="opcoes-acessibilidade" class="opcoes-acessibilidade apresenta-lista">
-                        <button id="aumentar-fonte" class="btn btn-primary fw-bold">A+</button>
-                        <button id="diminuir-fonte" class="btn btn-primary fw-bold">A-</button>
-
+                        <button id="aumentar-fonte" class="btn btn-primary fw-bold" aria-label="Aumentar o tamanho da fonte">A+</button>
+                        <button id="diminuir-fonte" class="btn btn-primary fw-bold"aria-label="Diminuir o tamanho da fonte">A-</button>
+                        <button id="alterna-contraste" class="btn btn-primary fw-bold"><i
+                                class="bi bi-shadows"></i></button>
                     </div>
                 </div>
             </nav>
         </section>
     </header>
 
-    <div class="section-container" id="home">
+    <div class="section-container" id="home" tabindex="0">
         <section class="home-content">
             <h3>O Solo</h3>
             <p>O Solo pode ser definido como um corpo natural constituído de substâncias orgânicas (como raízes de
@@ -60,7 +63,7 @@
         </section>
     </div>
 
-    <div class="section-container" id="about">
+    <div class="section-container" id="about" tabindex="0">
         <section class="about-content">
             <h2>Formação e composição do solo</h2>
             <p>O Solo é um sistema dinâmico, isto é, encontra-se em constante fluxo de matéria e energia. Seu
@@ -85,7 +88,7 @@
     </div>
 
     <!-- Seção de Contato -->
-    <div class="section-container" id="contact">
+    <div class="section-container" id="contact" tabindex="0" >
         <section class="contact-content">
             <h2>Entre em Contato</h2>
             <p>Se você tiver dúvidas ou quiser saber mais sobre outros temas relacionados à Agricultura, preencha o
@@ -121,6 +124,7 @@
             </div>
         </section>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollReveal.js/4.0.9/scrollreveal.js"></script>
     <script src="script.js"></script>
 </body>
 

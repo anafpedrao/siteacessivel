@@ -1,3 +1,18 @@
+/* Definições de variáveis no :root */
+:root {
+    --alto-contraste-fundo: #000000;
+    --alto-contraste-texto: #ffffff;
+    --alto-contraste-link: #ffd700;
+
+    --cor-texto-claro: #333333;
+    --cor-fundo-claro: #f4f4f4;
+    --cor-primaria: #006b22;
+    --cor-secundaria: #2ecc71;
+    --cor-botao-hover: #2980b9;
+    --cor-navbar: #34495e;
+}
+
+
 /* Resetando margens e padding */
 * {
     margin: 0;
@@ -15,7 +30,7 @@ body {
 
 /* Estilo do Header */
 .header {
-    background-color: darkgreen;
+    background-color: var(--cor-primaria);
     padding: 5px 0;
     position: fixed;
     width: 100%;
@@ -195,7 +210,7 @@ textarea {
 
 /* Estilo do botão */
 .btn-submit {
-    background-color: goldenrod;
+    background-color: var(--cor-secundaria);
     color: white;
     padding: 12px 25px;
     border: none;
@@ -207,7 +222,7 @@ textarea {
 }
 
 .btn-submit:hover {
-    background-color: darkgoldenrod;
+    background-color: var(--cor-botao-hover);
 }
 
 /* Informações adicionais */
@@ -302,3 +317,48 @@ textarea {
     display: none;
 }
 
+/* Alto contraste */
+.modo-contraste {
+    background-color: var(--cor-fundo-escuro) !important;
+    color: var(--cor-texto-escuro) !important;
+}
+
+.modo-contraste a {
+    color: var(--alto-contraste-link) !important;
+}
+
+.modo-contraste .btn {
+    background-color: var(--alto-contraste-link) !important;
+    color: black !important;
+    border: 2px solid var(--alto-contraste-link) !important;
+}
+
+.modo-contraste .navbar {
+    background-color: var(--cor-navbar) !important;
+}
+
+.modo-contraste .navbar a {
+    color: var(--cor-texto-escuro) !important;
+}
+
+.alto-contraste {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+}
+
+
+.alto-contraste header,
+.alto-contraste .section-container,
+.alto-contraste .footer {
+    background-color: var(--alto-contraste-fundo);
+    color: var(--alto-contraste-texto);
+    
+}
+
+.alto-contraste .navbar {
+    color: var(--alto-contraste-link);
+}
+
+.alto-contraste .opcoes-acessibilidade{
+    color: var(--alto-contraste-link);
+}
